@@ -15,7 +15,7 @@ function startStopTimer(bool){
 }
 startStopTimer(true)
 
-pause.addEventListener("click", function(e) {
+pause.addEventListener("click", (e) => {
     if (pause.innerText === "pause") {
         pause.innerText = "resume"
         startStopTimer(false)
@@ -33,16 +33,16 @@ pause.addEventListener("click", function(e) {
     }
 })
 
-plus.addEventListener("click", function(e) {
+plus.addEventListener("click", (e) => {
     counter.innerText++
 })
 
-minus.addEventListener("click", function(e) {
+minus.addEventListener("click", (e) => {
     counter.innerText--
 })
 
 let timeCounter
-like.addEventListener("click", function(e) {
+like.addEventListener("click", (e) => {
     let y = document.getElementById(`${counter.innerText}`)
     if(y) {
         timeCounter += 1
@@ -56,7 +56,7 @@ like.addEventListener("click", function(e) {
     }
 })
 
-submit.addEventListener("click", function(e) {
+submit.addEventListener("click", (e) => {
     e.preventDefault()
     let comments = document.querySelector(".comments")
     let comment = document.getElementById("comment-input")
